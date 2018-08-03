@@ -140,7 +140,6 @@ d3.csv("flights-airport.csv", function(flights) {
         .sort(function(a, b) { 
       			return countByAirport[b.iata] - countByAirport[a.iata]; 
     }).on("mouseover", function(d){
-      		console.log(d.iata);
            cells.select('g.'+d.iata).selectAll("path.arc")
             .style("display", "inherit")
         }).on("mouseout", function(d){
